@@ -1,0 +1,27 @@
+.providerCard {
+  @apply flex flex-col px-16 py-8 items-start;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 24px 0px rgba(122, 109, 211, 0.8);
+  background: rgb(6, 4, 21);
+
+  @media (max-width: 650px) {
+    padding: 1.5rem;
+  }
+
+  & p:first-child {
+    @apply mb-8 text-title;
+  }
+
+  .count {
+    @apply font-extrabold leading-10;
+    font-size: 31px;
+    letter-spacing: -0.01;
+    color: rgba(232, 230, 247, 1);
+  }
+
+  img {
+    @apply mb-6;
+    max-height: 9.25rem;
+    width: auto;
+  }
+}

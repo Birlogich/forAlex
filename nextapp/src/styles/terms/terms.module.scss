@@ -1,0 +1,39 @@
+.terms {
+   @apply text-title text-left relative;
+
+   h2 {
+      @apply font-bold text-customlg mb-4;
+   }
+
+   h3 {
+      @apply font-bold text-xl mb-4;
+   }
+
+   & > div {
+      @apply flex flex-col;
+      max-width: 700px;
+      margin: 0 auto;
+      margin-bottom: clamp(60px, 8.33vw, 120px);
+      & > p {
+         @apply mb-8;
+      }
+
+      & > p:last-child {
+         @apply mb-0;
+      }
+
+      & > div {
+         @apply mb-8;
+         & > p {
+            @apply mb-4;
+
+            & > span {
+               @apply pl-8 inline-block;
+            }
+         }
+         & > p:last-child {
+            @apply mb-0;
+         }
+      }
+   }
+}

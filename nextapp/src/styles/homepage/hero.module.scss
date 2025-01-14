@@ -1,0 +1,96 @@
+.hero {
+  @apply relative mx-auto my-0;
+  margin-bottom: clamp(60px, 11vw, 160px);
+  & > div {
+    @apply flex flex-col items-center relative z-10;
+  }
+
+  h1 {
+    @apply font-bold text-center bg-clip-text max-w-[835px] mb-3;
+    background: linear-gradient(180deg, rgb(232, 230, 247), rgb(188, 182, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-size: 4.35rem;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    @apply mb-6 leading-normal;
+  }
+
+  & > div > div {
+    @apply flex gap-x-6;
+    z-index: 1;
+
+    button {
+      @apply w-[196px];
+    }
+  }
+
+  & img {
+    @apply scale-125;
+  }
+
+  .stars {
+    @apply absolute w-full h-full left-0 bg-no-repeat bg-center;
+    top: -1.5vw;
+    z-index: -1;
+    background-image: url("../../../public/assets/images/bg-stars.png");
+  }
+
+  .stripes {
+    @apply absolute w-full h-full left-0 top-0 bg-cover bg-no-repeat bg-center;
+    z-index: -2;
+    scale: 1.5;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero {
+    @apply mb-20;
+    h1 {
+      @apply leading-10;
+      font-size: 32px;
+      max-width: 600px;
+    }
+
+    & img {
+      @apply scale-100;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    text-align: center;
+
+    & > div {
+      max-width: 280px;
+      padding: 0;
+
+      & > div {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+
+        & > button,
+        & > a {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    h1 {
+      @apply leading-10;
+      font-size: 32px;
+      max-width: 600px;
+    }
+
+    & img {
+      scale: 1.4;
+      margin-top: 2rem;
+    }
+  }
+}

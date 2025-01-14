@@ -1,0 +1,76 @@
+.footer {
+  @apply flex flex-col px-8 py-12 items-center;
+  box-shadow: 0px 0px 48px 0px rgba(49, 32, 168, 0.8) inset;
+  border-radius: 1.25rem;
+}
+
+.footerRow {
+  @apply flex mb-8 justify-between w-full gap-x-9;
+
+  @media (max-width: 890px) {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  img {
+    max-width: 280px;
+
+    @media (max-width: 440px) {
+      max-width: 152px;
+    }
+  }
+
+  h3 {
+    @apply text-white leading-8;
+    margin-bottom: clamp(24px, 4.15vw, 60px);
+    font-size: 25px;
+
+    @media (max-width: 440px) {
+      font-size: 1rem;
+    }
+  }
+
+  & > div p {
+    @apply text-white mb-5 leading-8;
+    font-size: 20px;
+  }
+
+  & > div a {
+    @apply mb-5;
+  }
+
+  & > div:first-child {
+    @apply mt-20;
+
+    @media (max-width: 650px) {
+      margin-top: 1rem;
+    }
+
+    p {
+      @apply text-white;
+      margin-bottom: 60px;
+    }
+  }
+
+  & > div:last-child {
+    @apply flex justify-between w-full;
+    max-width: 600px;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+
+    & > div {
+      @apply flex flex-col;
+    }
+  }
+
+  .follow {
+    @apply mb-8;
+    margin-bottom: 2rem;
+  }
+
+  .social {
+    @apply flex gap-x-5 items-center;
+  }
+}

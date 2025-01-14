@@ -1,0 +1,15 @@
+.input {
+  @apply flex flex-col mb-12;
+
+  & > div {
+    @apply w-full relative;
+
+    & > img {
+      @apply absolute w-6 h-6 top-3 right-3;
+    }
+
+    & > input {
+      @apply w-full;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.paymentpage {
+  @apply flex flex-col relative;
+  margin-bottom: clamp(60px, 8.33vw, 120px);
+
+  form {
+    @apply grid grid-cols-2 justify-between gap-x-6;
+
+    @media (max-width: 790px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.formSection {
+  @apply flex flex-col mb-12;
+
+  & > div {
+    @apply w-full relative;
+
+    & > img {
+      @apply absolute w-6 h-6 top-3 right-3;
+    }
+
+    & > input {
+      @apply w-full;
+    }
+  }
+}
+
+.formSectionRow {
+  @apply flex gap-x-6 w-full;
+  div {
+    @apply w-full;
+
+    @media (max-width: 460px) {
+      width: 50%;
+    }
+  }
+}
+.formSectionRow_bottom {
+  @apply flex gap-x-6 w-full;
+
+  @media (max-width: 460px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & > div:first-child {
+    @apply flex-auto;
+  }
+
+  & > div:last-child {
+    @apply flex-auto;
+    max-width: 176px;
+  }
+}
+
+.summary {
+  @apply flex flex-col p-6 rounded-lg;
+
+  & > p {
+    @apply text-title mb-6;
+    font-size: 25px;
+  }
+
+  & > div {
+    @apply flex w-full justify-between mb-6;
+  }
+
+  & > div:nth-child(7) {
+    @apply pt-6 text-title;
+    border-top: 1px solid white;
+
+    & span {
+      font-size: 25px;
+    }
+  }
+
+  & button {
+    @apply mb-3;
+  }
+}
+
+.summarySection {
+  & > p:first-child {
+    @apply text-title;
+  }
+  & > p:last-child {
+    font-size: 14px;
+  }
+}
+
+.reminder {
+  @apply flex flex-col py-3 px-6 rounded-lg;
+  border: 1px solid rgb(43, 60, 113);
+  background: rgb(21, 30, 56);
+  color: #95afff;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  &::after {
+    @apply w-6 h-6 absolute right-3 top-3;
+    content: "";
+    position: absolute;
+    background-image: url("../../../../public/assets/images/paymentpage/dropdown.svg");
+    pointer-events: none;
+  }
+}

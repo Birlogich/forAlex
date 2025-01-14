@@ -1,0 +1,36 @@
+.btn {
+  @apply flex justify-center px-7 rounded-lg;
+  padding-block: 11px;
+  border: 1px solid transparent;
+  color: #fff;
+  background:
+    linear-gradient(to top, #35094a, #7c15ab) padding-box,
+    linear-gradient(to right, #9e57bf00, #cd93e800, #9e57bf00) border-box,
+    linear-gradient(to top, #35094a, #7c15ab) border-box;
+  &:hover {
+    background:
+      linear-gradient(to top, #35094a, #7c15ab) padding-box,
+      linear-gradient(to right, #9e57bf00, #cd93e8, #9e57bf00) border-box,
+      linear-gradient(to top, #35094a, #7c15ab) border-box;
+  }
+
+  &:active {
+    background:
+      linear-gradient(to top, #35094a, #7c15ab) padding-box,
+      linear-gradient(to right, #9e57bf, #cd93e8, #9e57bf) border-box,
+      linear-gradient(to top, #35094a, #7c15ab) border-box;
+  }
+}
+
+.btn_trans {
+  @apply flex justify-center px-7 rounded-lg;
+  padding-block: 11px;
+  border: 1px solid rgba(244, 229, 251, 1);
+  &:hover {
+    border: 1px solid rgba(202, 129, 236, 1);
+  }
+
+  &:active {
+    border: 1px solid rgba(160, 29, 221, 1);
+  }
+}

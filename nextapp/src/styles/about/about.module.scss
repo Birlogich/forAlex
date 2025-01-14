@@ -1,0 +1,93 @@
+.about {
+  @apply flex flex-col items-center;
+  margin-bottom: clamp(60px, 8.33vw, 120px);
+}
+
+.gridel {
+  @apply p-8 flex flex-col items-start justify-center rounded-customLg;
+  box-shadow: inset 0px 0px 24px 0px rgba(122, 109, 211, 0.8);
+  background: rgb(6, 4, 21);
+
+  @media (max-width: 755px) {
+    padding: 20px;
+  }
+
+  & > div:first-child {
+    @apply flex items-center mb-6;
+
+    & > span:first-child {
+      @apply mr-3;
+    }
+
+    & > span:last-child {
+      @apply font-bold text-white;
+      font-size: 25px;
+    }
+  }
+}
+
+.aboutContainer {
+  @apply grid gap-6;
+  grid-template-rows: repeat(4, minmax(0, auto));
+  grid-template-columns: repeat(3, minmax(0, auto));
+  grid-template-areas:
+    "whoweare whoweare whoweare lamp2"
+    "whatwedo whatwedo whatwedo lamp2"
+    "values values vision vision"
+    "values values lamp1 lamp1";
+
+  @media (max-width: 755px) {
+    display: flex;
+    max-width: 320px;
+    flex-direction: column;
+
+    a {
+      max-width: 280px;
+    }
+  }
+}
+
+.whoweare {
+  grid-area: whoweare;
+}
+.whatwedo {
+  grid-area: whatwedo;
+}
+.lamp1 {
+  @apply flex items-center justify-center;
+  grid-area: lamp1;
+  @media (max-width: 755px) {
+    display: none;
+  }
+}
+.values {
+  grid-area: values;
+
+  & > div {
+    & > p:nth-child(2n + 1) {
+      @apply text-title font-bold mb-2;
+      font-size: 20px;
+    }
+
+    & > p:nth-child(2n) {
+      @apply mb-6;
+    }
+  }
+
+  @media (max-width: 755px) {
+    order: 5;
+  }
+}
+.vision {
+  grid-area: vision;
+
+  @media (max-width: 755px) {
+    order: 4;
+  }
+}
+.lamp2 {
+  grid-area: lamp2;
+  @media (max-width: 755px) {
+    display: none;
+  }
+}

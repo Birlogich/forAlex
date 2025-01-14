@@ -1,0 +1,8 @@
+.data {
+  @apply flex flex-col items-center;
+  margin-bottom: clamp(60px, 8.33vw, 120px);
+
+  & > div:nth-child(2) {
+    @apply grid grid-cols-1 gap-6;
+  }
+}

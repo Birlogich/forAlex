@@ -1,0 +1,14 @@
+.successMessage {
+  @apply flex flex-col w-full justify-center items-center py-8;
+  padding-inline: clamp(20px, 9.16vw, 132px);
+  margin-bottom: clamp(60px, 8.33vw, 120px);
+  max-width: 744px;
+  img {
+    @apply mb-9;
+    max-width: 200px;
+  }
+
+  a {
+    @apply w-full;
+  }
+}

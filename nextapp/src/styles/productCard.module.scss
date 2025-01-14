@@ -1,0 +1,18 @@
+.productCard {
+  @apply flex flex-col p-8 items-start rounded-customLg;
+  box-shadow: inset 0px 0px 24px 0px rgba(122, 109, 211, 0.8);
+  background: rgb(6, 4, 21);
+
+  img {
+    @apply mb-3;
+  }
+}
+
+.title {
+  @apply mb-3 text-white leading-8;
+  font-size: 25px;
+}
+
+.text {
+  @apply mb-7 max-w-[296px];
+}

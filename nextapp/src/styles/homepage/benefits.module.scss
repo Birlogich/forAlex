@@ -1,0 +1,26 @@
+.benefits {
+  @apply flex flex-col items-center;
+  margin-bottom: 7.5rem;
+
+  @media (max-width: 960px) {
+    margin-bottom: 5rem;
+  }
+
+  & > div:not(:first-child) {
+    @apply grid gap-y-8 w-full;
+
+    @media (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  & > p {
+    @apply text-center mb-12;
+    max-width: 600px;
+  }
+
+  & > button {
+    width: 300px;
+  }
+}

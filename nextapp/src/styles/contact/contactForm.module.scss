@@ -1,0 +1,20 @@
+.contactForm {
+  @apply w-full flex flex-col py-8 rounded-lg max-w-[744px];
+  margin-bottom: clamp(60px, 8.33vw, 120px);
+  padding-inline: clamp(20px, 9.16vw, 132px);
+
+  & > div {
+    @apply flex flex-col mb-4;
+
+    p {
+      @apply mb-2;
+    }
+  }
+
+  & > div:nth-child(2) {
+    @apply mb-9;
+    textarea {
+      @apply h-[160px];
+    }
+  }
+}

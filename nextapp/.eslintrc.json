@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "google",
+    "prettier"
+  ],
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "new-cap": ["error", { "capIsNewExceptions": ["Inter"] }],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "require-jsdoc": "off",
+    "react/no-children-prop": "off"
+  }
+}

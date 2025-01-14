@@ -1,0 +1,151 @@
+@import "./normalize.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-balance {
+    @apply text-balance;
+  }
+  .big-margin {
+    margin-bottom: clamp(60px, 8.33vw, 120px);
+  }
+  .el-boxShadow {
+    box-shadow: inset 0px 0px 24px 0px rgba(122, 109, 211, 0.8);
+  }
+}
+
+:root {
+  --bg: #060415;
+  --linearSubtitle: linear-gradient(180deg, #e8e6f7 0%, #bcb6e9 100%);
+  --main: #bcb6e9;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-bg flex flex-col left-6 font-nunito overflow-x-hidden min-h-screen text-main;
+}
+
+main {
+  @apply flex-auto;
+}
+
+.container {
+  @apply px-8 max-w-[1192px] mx-auto my-0;
+
+  @media (max-width: 360px) {
+    padding-inline: 20px;
+  }
+}
+
+.subtitleblock {
+  @apply flex flex-col items-center text-center mb-12;
+
+  & > h2 {
+    @apply font-bold text-customlg mb-4;
+    line-height: 3rem;
+    background: linear-gradient(180deg, rgb(232, 230, 247), rgb(188, 182, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (max-width: 960px) {
+      margin-bottom: 4px;
+      font-size: 26px;
+    }
+  }
+
+  & > p {
+    @apply max-w-[600px];
+  }
+}
+
+.benefitsRow {
+  margin-bottom: clamp(32px, 3.33vw, 48px);
+  & > div:nth-child(2n) {
+    margin-right: clamp(0px, 6.66vw, 96px);
+  }
+
+  & > div:nth-child(2n + 1) {
+    margin-left: clamp(0px, 6.66vw, 96px);
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 960px) {
+    & > div {
+      margin-inline: 0 !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    flex-direction: column;
+  }
+}
+
+.boxShadowBorder {
+  box-shadow: inset 0px 0px 32px 0px rgba(122, 109, 211, 0.8);
+  background: rgb(6, 4, 21);
+}
+
+input,
+textarea,
+.customSelectButton {
+  &::placeholder {
+    @apply text-purple;
+  }
+  @apply text-purple rounded-lg cursor-pointer;
+  padding-block: 11px;
+  padding-inline: 19px;
+  border: 1px solid transparent;
+  box-shadow: inset 0px 0px 12px 0px rgba(122, 109, 211, 0.8);
+  background: rgb(6, 4, 21);
+}
+
+input:focus,
+textarea:focus {
+  color: #bcb6e9;
+  background: #0c082a;
+}
+
+input:hover,
+textarea:hover {
+  border: 1px solid #bcb6e9;
+}
+
+.stripes {
+  @apply absolute w-full h-full left-0 top-0 bg-cover bg-no-repeat bg-center;
+  z-index: -2;
+  scale: 1.2;
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+
+.navigation {
+  @apply flex justify-between mx-8 text-nowrap max-w-[567px] flex-auto;
+
+  & > a {
+    @apply text-title;
+  }
+}
+
+@media (max-width: 960px) {
+  .navigation {
+    display: none;
+    height: 0;
+    flex-direction: column;
+    margin-top: 2rem;
+    transition: height 0.3s ease-in-out;
+    & > a {
+      margin-bottom: 4px;
+    }
+  }
+
+  .navigation.active {
+    display: flex;
+    height: auto;
+  }
+}

@@ -1,0 +1,25 @@
+.developerspage {
+   h2,
+   h3,
+   h4,
+   h5,
+   span {
+      @apply font-bold;
+      color: #d2cef0;
+   }
+
+   p {
+      @apply mb-4;
+   }
+
+   li {
+      outline: none !important;
+   }
+
+   div[tabindex="0"][role="button"] {
+      & > div {
+         background-color: #060415;
+         border: none;
+      }
+   }
+}

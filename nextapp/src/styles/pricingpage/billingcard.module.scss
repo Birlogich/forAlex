@@ -1,0 +1,69 @@
+@import "../button.module.scss";
+
+.billingcard {
+  @apply flex flex-col p-8 items-center cursor-pointer h-full rounded-customLg  shadow-suctomActive;
+  background: rgb(6, 4, 21);
+  max-height: 512px;
+
+  @media (max-width: 960px) {
+    padding: 20px;
+  }
+
+  & > span {
+    @apply px-8 py-2 font-bold flex mb-8 text-violet bg-light-violet;
+    border-radius: 0px 0px 8px 8px;
+    margin-top: -32px;
+    box-shadow: inset 0px 17px 24px 0px rgba(122, 109, 211, 0.8);
+
+    @media (max-width: 960px) {
+      margin-top: -20px;
+    }
+  }
+
+  .cardtitle {
+    @apply flex flex-col items-center mb-6 h-[128px];
+
+    & > p:first-child {
+      @apply font-bold text-xl text-title mb-3 flex-auto;
+    }
+
+    .permonth {
+      @apply text-purple mb-1;
+    }
+
+    .price {
+      @apply font-semibold text-customlg text-title;
+    }
+  }
+
+  .benefits {
+    @apply flex-auto mb-3;
+    & > p {
+      @apply font-semibold mb-5;
+    }
+  }
+
+  .benefit {
+    @apply flex text-title mb-3;
+  }
+
+  .benefit::before {
+    content: "";
+    @apply block w-6 h-6 mr-2;
+    background-image: url("../../../public/assets/images/tick.svg");
+  }
+
+  button {
+    @apply w-full;
+  }
+}
+
+.billingcard_active {
+  @apply shadow-suctomActive;
+  background: rgb(12, 8, 42);
+  max-height: 552px;
+
+  & > a {
+    @extend .btn;
+  }
+}

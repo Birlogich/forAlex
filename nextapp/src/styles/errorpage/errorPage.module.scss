@@ -1,0 +1,28 @@
+.errorPage {
+  margin-bottom: clamp(32px, 5.55vw, 80px);
+
+  & > div {
+    @apply flex flex-col items-center text-center h-auto p-8 rounded-lg;
+    & > div {
+      @apply flex flex-col max-w-[336px];
+
+      & h2 {
+        @apply text-customlg text-title mb-4;
+        line-height: 3rem;
+      }
+
+      & > p {
+        @apply mb-4;
+      }
+    }
+
+    & > a {
+      @apply w-full mb-6 max-w-[336px];
+      max-width: 336px;
+    }
+
+    img {
+      @apply w-full max-w-[474px] max-h-[424px];
+    }
+  }
+}

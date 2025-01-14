@@ -1,0 +1,62 @@
+.customSelect {
+  position: relative;
+
+  & > button {
+    @apply w-full flex justify-start;
+    color: rgb(188, 182, 233);
+  }
+}
+
+.dropdown {
+  @apply absolute w-6 h-6 cursor-pointer;
+  pointer-events: none;
+}
+
+.selectDropDown {
+  @apply p-2 absolute w-full mt-[10px] rounded-lg;
+  list-style: none;
+  transition: 0.5s ease;
+  box-shadow: inset 0px 0px 12px 0px rgba(122, 109, 211, 0.8);
+  background: rgb(12, 8, 42);
+  transform: scaleY(0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.selectDropDown:focus-within {
+  box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+}
+
+.selectDropDown li {
+  @apply flex gap-4 py-3 px-5 relative cursor-pointer items-center;
+
+  & img {
+    @apply w-6 h-4;
+  }
+}
+
+.selectDropDown li label {
+  @apply w-full cursor-pointer;
+}
+
+.selectDropDown li:hover,
+.selectDropDown li input:checked {
+  background-color: #060415;
+}
+
+.selectDropDown li:focus-within {
+  background-color: #060415;
+}
+
+.input {
+  @apply absolute left-0 opacity-0;
+}
+
+.dropdown_active {
+  transform: rotate(180deg);
+}
+
+.selectDropDown_active {
+  @apply opacity-100 visible;
+  transform: scaleY(1);
+}

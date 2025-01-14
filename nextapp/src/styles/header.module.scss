@@ -1,0 +1,57 @@
+.header {
+  margin: 0 auto;
+  @apply flex justify-between items-center mt-8 py-4 rounded-2xl max-w-[1051px] h-auto w-full relative z-20 bg-bg-title text-center;
+  padding-inline: clamp(1.5rem, 5vw, 4.5rem);
+  border-width: 1px;
+  margin-bottom: clamp(32px, 5.55vw, 80px);
+  border-image: linear-gradient(90deg, rgba(188, 182, 233, 0), rgba(188, 182, 233, 1), rgba(188, 182, 233, 0)) 1 0;
+
+  & > a {
+    @apply w-[152px] h-[40px];
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .btns {
+    @apply flex gap-x-6;
+
+    & > .burger {
+      @apply hidden;
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding-inline: 2rem;
+    align-items: flex-start;
+
+    .btns {
+      & > .burger {
+        @apply block;
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding-inline: 2rem;
+    align-items: flex-start;
+
+    .btns {
+      & > .burger {
+        @apply block;
+      }
+    }
+  }
+}
+
+.header_mobile {
+  @apply flex flex-col items-center;
+
+  & > .row {
+    @apply flex justify-between w-full;
+  }
+
+  nav {
+    max-width: 106px;
+  }
+}

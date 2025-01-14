@@ -1,0 +1,31 @@
+.products {
+  @apply flex flex-col items-center;
+  margin-bottom: 7.5rem;
+
+  & > p {
+    @apply mb-12;
+  }
+
+  & > div:not(:first-child) {
+    @apply grid grid-cols-3 gap-6 mb-12;
+  }
+
+  & > button {
+    @apply w-[300px];
+  }
+
+  @media (max-width: 960px) {
+    margin-bottom: 5rem;
+  }
+
+  @media (max-width: 700px) {
+    & > div:not(:first-child) {
+      display: flex;
+      flex-direction: column;
+
+      & > div {
+        height: 380px;
+      }
+    }
+  }
+}

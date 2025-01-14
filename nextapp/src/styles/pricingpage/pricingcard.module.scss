@@ -1,0 +1,21 @@
+.pricingcard {
+  @apply flex flex-col w-full p-8 rounded-customLg;
+  box-shadow: inset 0px 0px 32px 0px rgba(122, 109, 211, 0.8);
+  background: rgb(6, 4, 21);
+  margin-bottom: clamp(32px, 5.55vw, 80px);
+}
+
+.cardrow {
+  @apply flex justify-between mb-6 items-end;
+
+  & > div {
+    & p:first-child {
+      @apply text-title;
+    }
+  }
+
+  & > p {
+    @apply text-title font-bold;
+    font-size: 23px;
+  }
+}

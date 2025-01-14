@@ -1,0 +1,44 @@
+.benefitCard {
+  @apply flex rounded-2xl items-center gap-x-6 grid-cols-2 text-left;
+  padding-inline: 4.5rem;
+  padding-block: 2rem;
+  box-shadow: inset 0px 0px 48px 0px rgba(122, 109, 211, 0.8);
+  background: rgb(6, 4, 21);
+
+  @media (max-width: 960px) {
+    padding-block: 5rem;
+  }
+
+  @media (max-width: 750px) {
+    flex-direction: column !important;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  & > div {
+    img {
+      max-width: 400px;
+      aspect-ratio: 1;
+
+      @media (max-width: 960px) {
+        max-width: 300px;
+      }
+
+      @media (max-width: 400px) {
+        max-width: 220px;
+      }
+    }
+  }
+
+  & > div:last-child {
+    & > p:first-child {
+      @apply font-semibold text-white mb-6;
+      font-size: 1.56rem;
+    }
+
+    & > p:nth-child(n + 2) {
+      max-width: 452px;
+      margin-bottom: 0.75rem;
+    }
+  }
+}
